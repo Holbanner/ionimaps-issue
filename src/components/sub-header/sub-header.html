@@ -1,0 +1,26 @@
+<ion-grid class="custom-header-parent">
+	<ion-row class="custom-header" center>
+		<ion-col *ngIf='!isInfo' class="header-back" col-2 (tap)="goBack()">
+			<ion-icon name="ios-arrow-back"></ion-icon>
+		</ion-col>
+		<div class="header-title-wrapper">
+
+			<ion-col *ngIf="isSharable" col-12 class="header-title-with-share " [ngClass]="{'header-title-with-share-max' : isBackBarSizeFull, 'header-title-with-share-min': !isBackBarSizeFull}">
+				<ion-label class="header-label">{{title | translate}}</ion-label>
+
+				<!-- Icone de partage -->
+				<ion-icon *ngIf="isSharable && typeActus =='PUBLIQUE'" (tap)="shareActu()" class="header-share" name="ico-partager"></ion-icon>
+
+				<!--icon partage privee-->
+				<ion-icon *ngIf="typeActus =='PRIVEE'" (tap)="popUpActuPrive()" class="header-share" name="ico-partager-privee"></ion-icon>
+
+				<!-- Icone d'agenda -->
+				<ion-icon *ngIf="isEvent" center name="ico-agenda" (tap)="askAddToAgenda()" class="header-event" icon-right></ion-icon>
+			</ion-col>
+
+			<ion-col *ngIf="!isSharable" col-10 class="header-title-with-share " [ngClass]="{'header-title-with-share-max' : isBackBarSizeFull, 'header-title-with-share-min': !isBackBarSizeFull}">
+				<ion-label class="header-label">{{title | translate}}</ion-label>
+			</ion-col>
+		</div>
+	</ion-row>
+</ion-grid>

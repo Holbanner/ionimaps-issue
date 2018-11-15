@@ -1,0 +1,102 @@
+sub-header {
+    width: 100%;
+    ion-grid {
+        padding: 0px !important;
+    }
+    .header-back ion-icon {
+        font-size: 2rem;
+    }
+    ion-icon {
+        font-size: map-get($header, font-size);
+    }
+    .custom-header-parent {
+        background-color: map-get($colors, header);
+    }
+    .header-title-wrapper {
+        background-color: map-get($colors, header);
+        width: 84%;
+        margin-bottom: 7px;
+    }
+    .header-title,
+    .header-title-with-share {
+        text-align: center;
+        font-size: map-get($header, font-size);
+        text-transform: map-get($header, text-transform);
+        color: map-get($header, color);
+        font-size: map-get($header, font-size);
+        background-color: map-get($colors, header);
+        display: flex;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding: 20 0 0 0;
+    }
+    .header-title-with-share ion-label {
+        font-size: map-get($header, font-size);
+    }
+    .header-title,
+    .header-title-with-share-min {
+        margin-top: 8px;
+    }
+    .header-favorite,
+    .header-share,
+    .header-event {
+        padding: 15px;
+        font-size: 25px;
+        width: 15%;
+        text-align: center;
+        margin: auto;
+        /*margin-top: 1.5vw;*/
+    }
+    .header-back {
+        z-index: 1;
+        background-color: map-get($colors, primary);
+        display: flex;
+        flex: 0 0 16% !important;
+        max-width: 16% !important;
+        color: white;
+    }
+    .header-back>ion-icon,
+    .header-title>ion-label,
+    .header-title>ion-icon,
+    .header-title-with-share>ion-icon,
+    .header-title-with-share>ion-label {
+        margin: auto;
+    }
+    /* Larger than a phone */
+    @media (min-width: 567px) {
+        .header-title-wrapper {
+            height: 93px;
+        }
+        .header-title,
+        .header-title-with-share-min {
+            height: 85px;
+        }
+        .header-title,
+        .header-title-with-share-max {
+            height: 100px;
+        }
+        .header-back {
+            height: 100px;
+        }
+        .label {
+            font-size: 20px;
+        }
+    }
+    /* Small devices such as phone */
+    @media (max-width: 567px) {
+        .header-back {
+            height: 90px;
+        }
+        .header-title-wrapper {
+            height: 83px;
+        }
+        .header-title,
+        .header-title-with-share-max {
+            height: 90px;
+        }
+        .header-title,
+        .header-title-with-share-min {
+            height: 75px;
+        }
+    }
+}

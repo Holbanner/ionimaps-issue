@@ -1,0 +1,216 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+@import "ionic.globals";
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+/**
+ * ELEMENTS MODIFIABLES
+ */
+
+$colors: ( primary: #01a6c4, //Couleur primaire de l app => Actuellement bleu clair
+primary-dark: #004f67, //Couleur sur les fonds de catégories d actus => N est plus utilisé
+danger: #d8443c, //Couleur utilisé sur les messages d erreur
+header: #01a6c4, //Couleur du header, devrait correspondre à la couleur primary
+background: #f6f6f6, //Couleur de fond sur les pages principales - onglets
+background-sec: #01a6c4, //Couleur de fond sur les pages secondaires, devrait correspondre à la couleur primary
+mandatory-field: #d8443c, //Couleur signifiant qu un champ ou une question est obligatoire
+form-invalid: #d8443c, //Couleur à afficher lors d une erreur sur un formulaire
+paid-bill: #118915, //Couleur de facture payée
+unpaid-bill: #d8443c, //Couleur de facture non payée
+read-article-checkmark: #118915, //Icone checked d un article lu
+answered-survey-checkmark: #118915, //Icone checked d un sondage répondu
+positive-demand: #118915, //Demande traitée positivement
+negative-demand: #d8443c, //Demande traitée négativement
+amount-notread-actus-color: #d8443c, //Couleur de la pastille du nombre d actus non lues sur l onglet actus
+actu-read-text:#6D7172, //Couleur de texte actu lue
+actu-notread-text: black, //Couleur de texte actu non lue
+survey-answered-text:#6D7172, //Couleur sondage répondu
+survey-notanswered-text: black, //Couleur sondage non répondu
+reservation-info-button: #878787, //Couleur du bouton d infos supplémentaires dans les réservations
+reservation-new-modification:#4A8039, //Couleur des case à cocher en cas d ajout de modifications
+reservation-canceled: #A74B34, //Couleur des case à cocher en cas d annulation de modifications
+background-header-menu:#373737, //Plus utilisé, conservé au cas où
+default-categories:#E1E5E6, //Couleur de fond des catégories non sélectionnées, utilisé sur demandes, incident, boite à idées, ...
+incident-categories-text-color:#ffffff, //Couleur de texte des catégories de signalement d incident / slide horizontal
+suggestion-categories-text-color:#ffffff, //Couleur de texte des catégories de suggestion / slide horizontal
+social-icon: #ffffff //Couleur des liens de réseaux sociaux
+);
+//HEADER
+//Variables utilisés dans les headers
+$header:( color:#ffffff, //Couleur du texte
+font-size:1.7rem, //Taille du texte
+text-transform: uppercase, //Mise en majuscule du texte
+icon-background-color:#ffffff, //Couleur de fond de certaines icones => N est plus utilisé
+icon-color:#074f66 //Couleur de certaines icones => N est plus utilsé
+);
+//TABS VARIABLES
+$tabs:( color: #7C7D7E, //Couleur du texte, à implémenter
+background-color: #eceef3, //Couleur de fond des onglets
+);
+//MENU
+$menu:( button-background: #01a6c4, //Couleur de fond du menu de gauche
+button-color: #ffffff //Couleur des liens du menus de gauche
+);
+//DALLES
+$children:( color: #ffffff, //Couleur de texte des dalles de type enfance
+background-color:#004f67 //Couleur de fond des dalles de type enfance
+);
+$incident:( color: #ffffff, //Couleur de texte des dalles de type incident
+background-color:#ce2955 //Couleur de fond des dalles de type incident
+);
+$surveys:( color: #ffffff, //Couleur de texte des dalles de type sondages
+background-color:#1795bb //Couleur de fond des dalles de type sondages
+);
+$demands:( color: #ffffff, //Couleur de texte des dalles de type demandes
+background-color:#d17400 //Couleur de fond des dalles de type demandes
+);
+//ACTIONS VARIABLES
+//Variables de la page (onglet) des actions (dalles)
+$actions: ( radius: 15.62px, //arrondi des contours
+shadow:0 5px 20px 0 rgba(0, 0, 0, 0.12) //ombrage
+);
+//INFOS VARIABLES
+//Variables de la page (onglet) des infos utiles
+$infos: ( radius: 15.62px, //arrondi des contours
+shadow:0 5px 20px 0 rgba(0, 0, 0, 0.12) //ombrage
+);
+//ACTUS VARIABLES
+//Variables de la page (onglet) des actus
+$actus: ( radius:20.83px, //arrondi des contours
+shadow:0 5px 20px 0 rgba(0, 0, 0, 0.12), //ombrage
+date-color:#a5a5a5, //Couleur des dates
+text-color:#004f67, //couleur des textes
+filter-button:#ffffff, //Couleur des filtres - n est plus utilisés
+filter-selected-button:#004f67 //Couleur du filtre sélectionné - n est plus utilisé
+);
+//FORMS
+//Variables des formulaires
+//Utilisé sur les pages en fond foncé => les pages de connexions
+$light-form:( color: #ffffff, //Couleur du texte
+border-bottom: 1px solid #ffffff //Couleur des contours
+);
+//Variables des formulaires
+//Utilisé sur les pages en fond de formulaire clair => la plupart des formulaires
+$dark-form:( color: #4a4a4a //Couleur du texte
+);
+//BUTTONS VARIABLES
+//Variables du bouton le plus commun, sauf ce qui touche à la couleur
+//En principe, ne devrait pas être modifié
+$common-button: ( radius:104.17px, //Arrondi du bouton
+shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12), //Ombrage
+height: 3.3em, //Hauteur
+width: 85% //Largeur
+);
+//Bouton principal
+//Utilisé sur : Signalement d'une absence, modification du compte, paiement de facture
+//bouton d'informations (absence & résa), réservations, sondages
+$primary-button: ( background-color:#004f67, //Couleur de fond
+color:#ffffff, //Couleur de texte
+);
+//Bouton de création de compte
+$create-button:( text-color: #ffffff, //Couleur du texte
+color: #ffffff, //Couleur de fond
+round: 104.17px, //Arrondi
+shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12), //Ombrage
+no-account-color: #ffffff, //Couleur du bouton Continuer sans compte
+border: 2px solid #ffffff //Couleur et largeur du contour
+);
+//Bouton de connexion de compte
+$connect-button: ( text-color: #0578b0, //Couleur du texte
+color: #ffffff, //Couleur de fond
+round: 104.17px, //Arrondi
+shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12), //Ombrage
+no-account-color: #ffffff //Couleur du bouton Continuer sans compte
+);
+//PAGES
+//Concerne toutes les listes sous forme d'enchainement de blocs (factures, enfants, activités, ...)
+$list-items:( background-color: #ffffff, //Couleur de fond
+color: #004f67, //Couleur du texte
+radius: 15.62px, //Arrondi des blocks
+shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12) //Ombrage
+);
+//Détails des pages (Fond blanc avec contenu à l'intérieur) => pages secondaires les plus courantes
+$item-detail:( background-color:#ffffff, //Couleur de fond
+shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12), //Ombrage
+radius: 12px, //Arrondi
+margin: 15px //Marge par rapport au bord de l écran
+);
+//BILLS VARIABLES
+//variables concernant les factures
+$bills-detail:( label-color:#4a4a4a, //Couleur des libellés des champs
+value-color:#004f67, //Couleur des valeurs des champs
+pdf-button-background-color:#ffffff, //Couleur de fond du bouton PDF
+pdf-button-color:#004f67, //Couleur de texte du bouton PDF
+pdf-button-radius:104.17px, //Arrondi du bouton PDF
+pdf-button-shadow:0 5px 20px 0 rgba(0, 0, 0, 0.12), //Ombrage du bouton PDF
+pay-button-background-color:#004f67, // Couleur de fond du bouton de paiement
+pay-button-color:#ffffff, //Couleur du texte du bouton de paiement
+pay-button-radius:104.17px, //Arrondi du bouton de paiement
+pay-button-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12) //Ombrage du bouton de paiement
+);
+//couleur des placeholder des inputs
+$text-input-placeholder-color: #ffffff;
+/**
+ * /!\
+ * NE PAS MODIFIER A PARTIR D'ICI !!!
+ */
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+$tabs-ios-tab-font-size:8px;
+$tabs-ios-tab-min-height: 70px;
+$tabs-ios-border: 0px;
+$toolbar-ios-height: 70px;
+$card-ios-padding-bottom: 0px;
+$card-ios-padding-top: 0px;
+$card-ios-padding-left: 0px;
+$card-ios-padding-right: 0px;
+$card-ios-box-shadow: 0;
+$card-ios-border-radius: 0px;
+$card-ios-background-color: #EFF0F1;
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+$tabs-md-tab-font-size:8px;
+$tabs-md-tab-min-height: 70px;
+$tabs-md-border: 0px;
+$toolbar-md-height: 70px;
+$card-md-padding-bottom: 0px;
+$card-md-padding-top: 0px;
+$card-md-padding-left: 0px;
+$card-md-padding-right: 0px;
+$card-md-box-shadow: 0;
+$card-md-border-radius: 0px;
+$card-md-background-color: #EFF0F1;
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+@import "ionic.theme.default";
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+@import "ionicons";
+// Fonts
+// --------------------------------------------------
+// @import "roboto";
+@import "noto-sans";

@@ -1,0 +1,77 @@
+page-incident-map {
+	/*.app-root{
+		opacity:0 !important;
+		visibility: hidden;
+	}*/
+
+	button{
+		background-color: map-get($incident, background-color) !important;
+	}
+
+	ion-title{
+		text-transform: uppercase;
+	}
+
+	.toolbar-background{
+		background: transparent !important;
+	}
+
+	ion-navbar{
+		background-color: map-get($colors, header);
+		text-align: center;
+	}
+
+	ion-navbar ion-label{
+		text-transform: uppercase;
+		color: map-get($header, color);
+    	font-size: 1.7rem;
+	}
+
+	.toolbar-title, .back-arrow{
+		font-size: map-get($header, font-size);
+		text-transform: map-get($header, text-transform);
+		color: map-get($header, color);
+		font-size: map-get($header, font-size);
+	}
+
+	ion-grid{
+		padding:0px !important;
+	}
+
+	.back-arrow{
+		float: left;
+	}
+
+	.back-arrow ion-icon{
+	    margin-left: 20px;
+	    font-size: 2.2rem;
+	}
+
+	.validate-button{
+		float: right;
+		padding: 12px;
+		width: auto !important;
+		height: auto !important;
+	}
+	
+	.current-position-button{
+		top:90%;
+		left:85%;
+		background-color: map-get($colors, primary);
+		border-radius: 50px;
+		height: 3.2rem !important;
+		width: 2rem !important;
+	}
+
+	.transparent-bg{
+		background-color: rgba(0, 0, 0, 0) !important;
+	}
+
+	.close-col{
+		text-align: center;
+	}
+
+	.close-col ion-icon{
+		font-size: 3.5rem;
+	}
+}

@@ -1,0 +1,101 @@
+@mixin makeIcon($arg, $val) {
+    .ion-ios-#{$arg}:before,
+    .ion-ios-#{$arg}-outline:before,
+    .ion-md-#{$arg}:before,
+    .ion-md-#{$arg}-outline:before {
+        content: $val;
+    }
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../assets/fonts/icomoon.eot?jx6usg');
+    src: url('../assets/fonts/icomoon.eot?jx6usg#iefix') format('embedded-opentype'), url('../assets/fonts/icomoon.woff?jx6usg') format('woff'), url('../assets/fonts/icomoon.svg?jx6usg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@include makeIcon(ico-actu,
+'\e917');
+@include makeIcon(ico-demarche,
+'\e918');
+@include makeIcon(ico-info,
+'\e919');
+@include makeIcon(ico-date-debut,
+'\e904');
+@include makeIcon(ico-date-fin,
+'\e905');
+@include makeIcon(ico-fleche-arriere,
+'\e90f');
+@include makeIcon(ico-fleche-avant,
+'\e910');
+@include makeIcon(ico-enfant,
+'\e912');
+@include makeIcon(ico-enfant-resa,
+'\e914');
+@include makeIcon(ico-facture,
+'\e915');
+@include makeIcon(ico-facture-payee,
+'\e916');
+@include makeIcon(ico-partager,
+'\e91a');
+@include makeIcon(ico-partager-privee,
+'\e91b');
+@include makeIcon(ico-favoris,
+'\e90c');
+@include makeIcon(ico-lu,
+'\e903');
+@include makeIcon(ico-position-actuelle,
+'\e91c');
+@include makeIcon(ico-valider-adresse,
+'\e922');
+@include makeIcon(ico-profil,
+'\e91d');
+@include makeIcon(ico-reservation,
+'\e91e');
+@include makeIcon(ico-retour,
+'\e91f');
+@include makeIcon(ico-sondage,
+'\e920');
+@include makeIcon(ico-agenda,
+'\e900');
+@include makeIcon(ico-aide-info,
+'\e901');
+@include makeIcon(ico-ajouter-pj,
+'\e902');
+@include makeIcon(ico-sypprimer-pj,
+'\e922');
+@include makeIcon(ico-fermer,
+'\e90e');
+//??
+@include makeIcon(ico-fermer-2,
+'\e918');
+@include makeIcon(ico-information,
+'\e91a');
+@include makeIcon(ico-demande-deposee,
+'\e906');
+@include makeIcon(ico-demande-encours,
+'\e907');
+@include makeIcon(ico-demande-positive,
+'\e90a');
+@include makeIcon(ico-demande-negative,
+'\e909');
+@include makeIcon(ico-demande-traitee,
+'\e908');
+@include makeIcon(ico-demandes,
+'\e90b');

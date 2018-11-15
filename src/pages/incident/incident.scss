@@ -1,0 +1,151 @@
+page-incident {
+    /*:not(.incident-take-photo)*/
+    button {
+        background-color: map-get($incident, background-color) !important;
+    }
+    .item-detail {
+        padding-top: 20px !important;
+    }
+    .custom-label {
+        font-size: 1.7rem !important;
+    }
+    .custom-textarea textarea {
+        /*border-bottom: grey solid 1px !important;*/
+        border: #f0f0f0 solid 1px;
+        /*-moz-box-shadow: 0px 5px 5px 0px #656565;
+		-webkit-box-shadow: 0px 5px 5px 0px #656565;
+		-o-box-shadow: 0px 5px 5px 0px #656565;
+		box-shadow: 0px 5px 5px 0px #656565;
+		filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=5);*/
+    }
+    .incident-label {
+        color: black;
+    }
+    .incident-take-photo {
+        /*width: 42vw;*/
+        border-radius: 15.62px;
+        width: 100%;
+        /*height: 28vw;*/
+        height: 7em;
+    }
+    .incident-take-photo ion-icon {
+        font-size: 30px;
+        margin: auto;
+    }
+    .incident-take-photo-text {
+        font-size: 12px;
+        text-transform: none;
+        max-width: 100%;
+        white-space: normal;
+    }
+    .photo-wrapper {
+        text-align: left;
+        padding: 10px;
+        position: relative
+    }
+    .remove-circle {
+        color: map-get($colors, danger);
+        z-index: 1;
+        font-size: 30px;
+        position: absolute;
+        top: -6px;
+        left: -2px;
+    }
+    .question-square-parent {
+        margin: auto;
+        -webkit-flex: 0 0 5%;
+        -ms-flex: 0 0 5%;
+        flex: 0 0 5%;
+    }
+    .question-square {
+        background-color: map-get($colors, primary);
+        width: 10px;
+        height: 10px;
+    }
+    .question-label {
+        -webkit-flex: 0 0 95%;
+        -ms-flex: 0 0 95%;
+        flex: 0 0 95%;
+        font-size: 1.6em;
+    }
+    .label {
+        /*margin-bottom: 0px !important;*/
+    }
+    .geoloc {
+        border-radius: 0px;
+        padding-top: 2%;
+    }
+    /*.input-wrapper{
+		height:80px;
+	}*/
+    .photo-wrapper>img {
+        width: 100%
+    }
+    .photos-item .item-inner {
+        border-bottom: 0px !important;
+    }
+    .photo-row {
+        background: #f0f0f0;
+    }
+    .scrollable-categories {
+        /*padding: 0px !important;*/
+        white-space: nowrap;
+        width: 100%;
+    }
+    .scrollable-category {
+        /*border:3px solid #dadada;*/
+        border-radius: 104.17px;
+        width: auto;
+        min-width: 25vw;
+        max-width: 55vw;
+        margin: 8px !important;
+        display: inline-table;
+        margin-top: 0px;
+        white-space: normal;
+    }
+    .scrollable-category-loading {
+        opacity: 0.4;
+    }
+    .scrollable-category-loading img {
+        width: 30% !important;
+        margin: auto !important;
+    }
+    .scrollable-category ion-card-header {
+        padding: 10px;
+        padding-bottom: 5px;
+    }
+    .scrollable-category ion-card-content {
+        padding: 10px;
+        text-align: center;
+        /*font-weight: bold;*/
+        /*color:#a5a5a5;*/
+        font-size: 1.6rem;
+    }
+    .scrollable-categories {
+        ::-webkit-scrollbar {
+            display: none !important;
+            border: none;
+            width: 0;
+            background: rgba(0, 0, 0, 0);
+        }
+    }
+    /*.nav-decor{
+		background: transparent !important;
+	}*/
+    /*#map{
+		margin-top:-5px;
+	}*/
+    .selected-category {
+        background-color: map-get($incident, background-color) !important;
+    }
+    .selected-category .card-content {
+        color: map-get($colors, incident-categories-text-color);
+    }
+    .category-item .item-inner {
+        border-bottom: 0px !important;
+    }
+    .centered {
+        width: 50%;
+        height: 50%;
+    }
+}

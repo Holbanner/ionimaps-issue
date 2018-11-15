@@ -1,0 +1,585 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import "../theme/icons";
+/**
+ * DEFINITION GLOBALE A L'APPLICATION -- THEME
+ */
+
+@font-face {
+    font-family: SFNSText;
+    src: url(../assets/fonts/SFNSText.ttf) format("ttf");
+    font-weight: 200
+}
+
+* {
+    /*font-family: 'SFNSText' !important;*/
+}
+
+/**
+ * Hack pour essayer de résoudre le problème de clavier qui gène le scroll
+ */
+
+ion-col {
+    // position: initial !important;
+}
+
+.common-button {
+    margin: auto !important;
+    display: block !important;
+    height: map-get($common-button, height) !important;
+    box-shadow: map-get($common-button, shadow) !important;
+    border-radius: map-get($common-button, radius) !important;
+    width: map-get($common-button, width) !important;
+}
+
+.primary-button {
+    background-color: map-get($primary-button, background-color) !important;
+}
+
+/**
+ * MENU
+ */
+
+ion-menu ion-list {
+    margin: 0px !important;
+}
+
+.social-link {
+    color: map-get($colors, social-icon);
+    text-align: center;
+    font-size: 2.2em !important;
+}
+
+.param .item-inner {
+    border-bottom: none !important;
+}
+
+/**
+ * css des items d'une liste type
+ */
+
+.list-items {
+    background-color: map-get($list-items, background-color);
+    border-radius: map-get($list-items, radius);
+    box-shadow: map-get($list-items, shadow);
+    padding: 15px;
+    margin: 8px;
+    margin-bottom: 5px;
+}
+
+.list-items h2 {
+    color: map-get($list-items, color);
+    margin: 0 0 2px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.list-items .title {
+    color: map-get($list-items, color);
+}
+
+.list-items p {
+    overflow: inherit;
+    font-size: 1.4rem;
+    line-height: normal;
+    text-overflow: inherit;
+    color: #8e9093;
+    margin: 0 0 2px;
+}
+
+.item-detail {
+    background: map-get($item-detail, background-color);
+    box-shadow: map-get($item-detail, shadow);
+    border-radius: map-get($item-detail, radius);
+    margin: map-get($item-detail, margin);
+    /*padding-top: 10px;*/
+    padding-bottom: 10px;
+}
+
+/* FORMS */
+
+.light-form ion-item {
+    background-color: transparent;
+    width: 80% !important;
+    padding: 0px !important;
+}
+
+.light-form,
+.light-form ion-label,
+.light-form ion-input,
+.light-form .select-text {
+    color: map-get($light-form, color) !important;
+}
+
+.light-form .item-inner {
+    border-bottom: map-get($light-form, border-bottom) !important;
+}
+
+.light-form ion-icon {
+    margin-right: 10px;
+    border-radius: 60px;
+    font-size: 1.6rem !important;
+    padding: 2px !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: map-get($colors, background-sec);
+}
+
+.dark-form .label-only .item-inner {
+    border-bottom: 0px !important;
+}
+
+.dark-form .label-only {
+    min-height: 3rem !important;
+}
+
+.dark-form ion-label {
+    margin-left: 5px !important;
+}
+
+/*.dark-form .label-only ion-label{
+	margin-left: 5px !important;
+	font-size: 1.7rem !important;
+}*/
+
+.dark-form input {
+    margin: 0x !important;
+}
+
+.dark-form ion-label {
+    font-size: 1.7rem !important;
+    color: map-get($dark-form, color) !important;
+}
+
+.dark-form ion-col {
+    margin: 0px !important;
+}
+
+.dark-form .form-button {
+    background-color: map-get($colors, primary);
+    border-radius: 50px;
+    height: 3.2rem !important;
+    width: 3.2rem !important;
+}
+
+.article-image {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+ion-refresher:not(.actus-refresher) {
+    top: 80px !important;
+}
+
+.create-account-button {
+    margin-bottom: 12px !important;
+    color: map-get($create-button, text-color) !important;
+    border: map-get($create-button, border) !important;
+    background-color: map-get($colors, primary) !important;
+    font-weight: bold;
+}
+
+.connect-account-button {
+    color: map-get($connect-button, text-color) !important;
+    background-color: map-get($connect-button, color) !important;
+    font-weight: bold;
+}
+
+.menu-header {
+    background-color: map-get($menu, button-background) !important;
+    color: map-get($menu, button-color) !important;
+}
+
+.menu-header .item-inner {
+    border-bottom: 0px !important;
+}
+
+.menu-image {
+    display: block;
+    margin: auto;
+}
+
+.account-avatar {
+    border: map-get($colors, background-sec) solid 7px !important;
+}
+
+ion-spinner {
+    display: block;
+    margin: auto;
+}
+
+.user-name {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: auto;
+}
+
+ion-content {
+    background-color: map-get($colors, background) !important;
+}
+
+.secondary-page {
+    background-color: map-get($colors, background-sec) !important;
+}
+
+.tabbar {
+    background-color: map-get($colors, header) !important;
+}
+
+.bottom-pages {
+    margin-top: 90%;
+}
+
+.left-menu {
+    background-color: map-get($menu, button-background) !important;
+    color: map-get($menu, button-color) !important;
+}
+
+.left-menu hr {
+    background-color: map-get($menu, button-color) !important;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.left-menu .item-inner {
+    background-image: none !important;
+}
+
+.clear-cache .item-inner {
+    border-bottom: none !important;
+}
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0px;
+}
+
+.list-ios>.item-block:first-child {
+    border-top: none;
+}
+
+.list-ios>.item-block:last-child,
+.list-md .item-input:last-child {
+    border-bottom: none;
+}
+
+.custom-list-icon {
+    font-size: 40px !important;
+}
+
+.custom-hr {
+    background-color: black !important;
+    width: 220px !important;
+}
+
+.custom-title-overflow {
+    text-overflow: inherit;
+    overflow: inherit;
+}
+
+.list-header-md {
+    border-top: 0px !important;
+}
+
+.justified-text {
+    text-align: justify !important;
+}
+
+.custom-header-ionicon {}
+
+.custom-header-more-ionicon {
+    color: map-get($colors, background-header-menu)
+}
+
+.tabs-ios .tab-button,
+.tabs-ios .tab-button-icon,
+.tabs-md .tab-button,
+.tabs-md .tab-button-icon {
+    color: map-get($tabs, color);
+    background-color: map-get($tabs, background-color);
+}
+
+.tabs-min-size .tab-button {
+    min-height: 30px !important;
+}
+
+.tabs-full-size .tab-button {
+    /*min-height: 65px !important;*/
+    margin-bottom: -2px;
+    margin-right: -1px;
+}
+
+/*.tabs-md .tab-button{
+ 	min-height:45px;
+}*/
+
+.tabs-ios .tab-button[aria-selected=true],
+.tabs-md .tab-button[aria-selected=true] {
+    border-bottom: map-get($colors, primary) solid 5px;
+    min-height: 65px;
+}
+
+.tabs-ios .tab-button[aria-selected=true],
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+    /*background: map-get($colors, primary);
+    color: white;*/
+}
+
+.header-md::after,
+.tabs-md[tabsPlacement="top"]>.tabbar::after,
+.footer-md::before,
+.tabs-md[tabsPlacement="bottom"]>.tabbar::before {
+    background-image: none !important;
+}
+
+.tabs-md .tab-button[aria-selected=true],
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    /*background: map-get($colors, primary);
+	background: map-get($colors, background-color);
+    color: white;*/
+}
+
+.card-content {
+    width: 100%;
+}
+
+.tabbar .show-tabbar {
+    top: 64px !important;
+}
+
+.block-overlay-parent {
+    width: 100%;
+    height: 100%;
+    /*position:relative;*/
+}
+
+.block-overlay {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8vw 0 0 8vw;
+    border-color: transparent transparent transparent white;
+}
+
+.bar-button-menutoggle-md ion-icon {
+    padding: 0 5px;
+}
+
+.full-image {
+    width: 100%
+}
+
+.scrollable-buttons {
+    white-space: nowrap;
+    /*height: 90px;*/
+    height: 70px;
+    width: 100%;
+}
+
+/**
+ * Affichage de blocs style pinterest
+ */
+
+.pins {
+    column-count: 2;
+    column-gap: 0px;
+    column-fill: auto;
+}
+
+.pin {
+    display: inline-block;
+    border-radius: map-get($actus, radius);
+    box-shadow: map-get($actus, shadow);
+    background: white;
+    margin: 6px 6px 6px 6px;
+    width: calc(100% - 12px);
+}
+
+.pin img {
+    border-top-left-radius: map-get($actus, radius);
+    border-top-right-radius: map-get($actus, radius);
+}
+
+/**
+ * Supprime le bug de scroll lorsque le clavier est ouvert
+ */
+
+.scroll-content {
+    /*padding-bottom: 0 !important;*/
+}
+
+/*.scrollable-buttons .scroll-content{
+	margin-top:20px;
+}*/
+
+.sort-button {
+    touch-action: initial !important;
+    border-radius: 40px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12);
+    padding: 15px;
+    color: white;
+    margin-top: 20px;
+}
+
+.scrollable-buttons {
+    ::-webkit-scrollbar {
+        display: none !important;
+        border: none;
+        width: 0;
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+ion-app._gmaps_cdv_ .nav-decor {
+    background-color: transparent !important;
+}
+
+.connect-col {
+    text-align: center;
+}
+
+.connect-col button {
+    width: 200px;
+}
+
+.user-avatar img {
+    border-radius: 10px !important;
+    width: 94px !important;
+    height: 94px !important;
+    background: white !important;
+    border: map-get($menu, color) solid 7px;
+}
+
+.tabs-ios .tab-button {
+    max-width: 100%;
+}
+
+.button-ios:not(.sort-button):not(.bar-button):not(.item-block) {
+    margin: 0px;
+}
+
+.scrollable-categories {
+    height: 12vh; // height: 20vw;
+}
+
+/* Larger than a phone */
+
+@media (min-width: 567px) {
+    button:not(.sort-button):not(.bar-button):not(.item-block):not(.current-position-button):not([role="radio"]):not([role="checkbox"]) {
+        width: 50%;
+        /*float: right;*/
+        /* A VOIR */
+    }
+    .toolbar-ios {
+        min-height: calc(140px + 20px) !important;
+    }
+    .toolbar-title img {
+        max-width: 50% !important;
+    }
+    sub-header ion-icon {
+        //, header .custom-burger-icon
+        font-size: 2.5rem !important;
+    }
+    /**
+	 * Augmenter la taille des icones
+	 * Augmenter la taille des textes
+	 * Augmenter la taille des items (listes)
+	 */
+    ion-icon:not(.tab-button-icon):not(.custom-list-icon):not(.custom-header-ionicon):not(sub-header ion-icon):not(.custom-burger-icon):not(.remove-circle) {
+        font-size: 2rem !important;
+    }
+    /*.tab-button[aria-selected=true]{
+		min-height:70px !important;
+	}
+	.tab-button[aria-selected=false]{
+		min-height:50px !important;
+	}*/
+    /*.full-image{
+		margin-top: -3px;
+	}*/
+    .sort-button {
+        height: 40px;
+        margin-left: 15px;
+        font-size: 20px;
+    }
+    .main-container {
+        margin-top: 105px;
+        /*margin-top:83px;*/
+    }
+    .item-block:not(.item-radio):not(.item-checkbox):not(.item-label-stacked):not(.item-label):not(.item-input):not(.left-menu):not(.params):not(.item-toggle):not(.account-data) {
+        min-height: 10.4rem !important;
+    }
+    .item ion-thumbnail {
+        min-width: 66px;
+        min-height: 66px;
+    }
+    .item ion-thumbnail img {
+        width: 66px;
+        height: 66px;
+    }
+    .item .label h2 {
+        font-size: 2.1rem;
+    }
+    .item .label p {
+        font-size: 1.8rem;
+    }
+    .modal-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    ion-backdrop {
+        opacity: 0 !important;
+    }
+    .tabs-full-size .tab-button {
+        min-height: 70px !important;
+    }
+}
+
+/*.full-image{
+	margin-top: -13px;
+}*/
+
+/* Small devices such as phone */
+
+@media (max-width: 567px) {
+    button:not(.sort-button):not(.bar-button):not(.item-block):not(.alert-button) {
+        width: 100%;
+    }
+    /*.full-image{
+		margin-top: -13px;
+	}*/
+    .sort-button {
+        height: 30px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .main-container {
+        margin-top: 95px;
+        /*margin-top:73px;*/
+    }
+    .tabs-full-size .tab-button {
+        min-height: 65px !important;
+    }
+}
+
+.has-refresher>.scroll-content {
+    border-top: 0px !important;
+}
